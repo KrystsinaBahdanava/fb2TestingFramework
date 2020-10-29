@@ -1,0 +1,7 @@
+{
+  "dev": {
+    "database": "/sqlite/db/DQEMentoringProgram.db",
+    "test_data_folder": "/Users/Krystsina_Bahdanava/PycharmProjects/fb2TestingFramework/test_data"
+  }
+
+}
