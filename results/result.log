@@ -1,0 +1,19 @@
+
+
+ Testing of /Users/Krystsina_Bahdanava/PycharmProjects/fb2TestingFramework/test_data\smoke_tests.json is started
+
+ Test case Check Books table
+
+ Passed. Result is '2' Query is 'select count(*) from Books'. Parameter: ''
+
+ Test case Check if tables are populated
+
+ Passed. Result is '2' Query is 'select count(*) from %s '. Parameter: '('Books',)'
+
+ Passed. Result is '3563' Query is 'select count(*) from %s '. Parameter: '('Сонет 17 Уильям Шекспир. - лит. перевод Свами Ранинанда',)'
+
+ Passed. Result is '13013' Query is 'select count(*) from %s '. Parameter: '('Цветы для Элджернона',)'
+
+ Test case Check for duplicates
+
+ Passed. Result is '0' Query is 'select count(*) from ( select book_name, count(*) cnt from Books group by book_name having count(*) > 1)t'. Parameter: ''

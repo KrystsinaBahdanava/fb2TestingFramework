@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "name": "Check Books table",
+      "pre_execute": "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name",
+      "query": "select count(*) from Books",
+      "sign": "=",
+      "parameter": "no",
+      "expected": 2
+    },
+    {
+      "name": "Check if tables are populated",
+      "pre_execute": "",
+      "query": "select count(*) from %s ",
+      "parameter": "yes",
+      "sign": ">",
+      "expected": 0
+    },
+    {
+      "name": "Check for duplicates",
+      "pre_execute": "",
+      "query": "select count(*) from ( select book_name, count(*) cnt from Books group by book_name having count(*) > 1)t",
+      "parameter": "no",
+      "sign": "=",
+      "expected": 0
+    }
+  ]
+}
